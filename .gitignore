@@ -1,0 +1,27 @@
+# Entorno local
+VIDEO YOUTUBE.txt
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# Caché de Python
+__pycache__/
+*.py[cod]
+
+# Archivos de pytest
+.pytest_cache/
+
+# Variables de entorno
+.env
+
+# Archivos de VS Code
+.vscode/
+
+# Archivos de PyCharm
+.idea/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
