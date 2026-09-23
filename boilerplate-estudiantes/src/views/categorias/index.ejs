@@ -1,0 +1,23 @@
+<style>
+    span{
+        display: block;
+    }
+    h1{
+        color:red;
+    }
+</style>
+
+
+<div>
+    <h1><%=titulo %></h1>
+    <span>esta es una descripcion</span>
+
+<div>
+    <% categorias.forEach((categoria) =>{ %>
+        <span><%= categoria.nombre  %></span>
+        <br />
+        <span>La descripcion es: <%= categoria.descripcion %> </span>
+        <%})  %>
+</div>
+
+</div>
