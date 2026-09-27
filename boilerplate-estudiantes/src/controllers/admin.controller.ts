@@ -4,7 +4,7 @@ import { pool } from "../config/db";
 export async function listarConductores(req: Request, res: Response) {
     const [conductores] = await pool.query("SELECT * FROM conductor")
     res.render("sistema-radio-taxi/conductores", {
-        titulo: "Lista de conductores - Radio Taxi Coral",
+        titulo: "Lista de conductores - Radio Taxi Confort",
         conductores
     })
 }
