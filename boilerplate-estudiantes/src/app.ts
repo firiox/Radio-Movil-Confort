@@ -3,6 +3,7 @@ import path from 'node:path';
 import indexRoutes from './routes';
 import categoriaRoute from './routes/categorias.route';
 import adminRoute from './routes/admin.route';
+import operadorRoute from './routes/operador.route';
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use('/categorias', categoriaRoute);
   RUTA crear-conducotres -> /sistema-radio-taxi/crear-conductor
 */
 app.use('/sistema-radio-taxi', adminRoute);
+app.use('/sistema-radio-taxi/monitoreo', operadorRoute);
 
 app.use((_req: Request, res: Response) => {
   res.status(404).render('errors/404', {
