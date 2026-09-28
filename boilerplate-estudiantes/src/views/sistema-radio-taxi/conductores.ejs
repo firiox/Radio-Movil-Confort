@@ -1,13 +1,30 @@
 <div>
     <h1><%=titulo %></h1>
     <span>conductores de radio taxi confort</span>
+    <br/>
 
 <div>
+
+    <button><a href="/sistema-radio-taxi/crear-conductor">Crear conductor</a></button>
+
+
+    <table border="1">
+            <tr>
+                <th>Nombre:</th>
+                <th>Apellido:</th>
+                <th>Estado:</th>
+
+            </tr>
     <% conductores.forEach((conductor) =>{ %>
-        <span><%= conductor.nombre  %> <%= conductor.apellido  %></span>
-        <span> </span>
-        <span>Estado: <%= conductor.estado %><br /></span>
+        
+            <tr>
+                <td><%= conductor.nombre  %></td>
+                <td><%= conductor.apellido  %></td>
+                <td><%= conductor.estado %></td>
+            </tr>
+       
         <%})  %>
+     </table>
         
 </div>
 
