@@ -38,6 +38,11 @@ export async function crearConductor(req: Request, res: Response) {
 // OPERADORES
 
 export async function listarOperadores(req: Request, res: Response) {
+    const [operadores] = await pool.query("SELECT * FROM operador")
+    res.render("sistema-radio-taxi/admin/operadores", {
+        titulo: "Lista de operadores - Radio Taxi Confort",
+        operadores
+    })
 
 }
 
@@ -54,7 +59,7 @@ export async function crearOperador(req: Request, res: Response) {
 
 export function mostrarPaginaEmpresa(req: Request, res: Response){
 
-    res.render("sistema-radio-taxi/", {
+    res.render("sistema-radio-taxi/visitante", {
         titulo: "Radio Taxi Confort",
     })
 }

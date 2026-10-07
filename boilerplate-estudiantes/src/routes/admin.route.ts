@@ -1,14 +1,15 @@
 import { Router } from "express";
-import { crearConductor, listarConductores, mostrarCrearConductor, mostrarModulodeAdmin, mostrarPaginaEmpresa } from "../controllers/admin.controller";
+import { crearConductor, listarConductores, mostrarCrearConductor, mostrarModulodeAdmin, listarOperadores, mostrarPaginaEmpresa } from "../controllers/admin.controller";
 
 const router = Router()
-router.get("/", mostrarModulodeAdmin);
-router.get("/", listarConductores);
+router.get("/admin", mostrarModulodeAdmin);
+router.get("/sistema-radio-taxi/admin/conductores", listarConductores);
+router.get("/operadores", listarOperadores);
 router.get("/", mostrarPaginaEmpresa);
 
 //DEPRECATED
 
-router.get("/conductores", listarConductores);
+
 
 /*
 router.get("/crear-conductor", mostrarCrearConductor);
