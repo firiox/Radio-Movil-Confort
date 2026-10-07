@@ -24,7 +24,7 @@ app.use('/categorias', categoriaRoute);
 /*
   RUTA crear-conducotres -> /sistema-radio-taxi/crear-conductor
 */
-app.use('/sistema-radio-taxi', adminRoute);
+app.use('/sistema-radio-taxi/admin', adminRoute);
 app.use('/sistema-radio-taxi/monitoreo', operadorRoute);
 app.use('/sistema-radio-taxi/visitante', visitatanteRoute);
 

@@ -9,6 +9,12 @@ export async function listarConductores(req: Request, res: Response) {
     })
 }
 
+export function mostrarModulodeAdmin(req: Request, res: Response) {
+    res.render("sistema-radio-taxi/admin", {
+        titulo: "Modulo de Administración - Radio Taxi Confort",
+    })
+}
+
 export function mostrarCrearConductor(req: Request, res: Response){
 
     res.render("sistema-radio-taxi/crear-conductor", {
